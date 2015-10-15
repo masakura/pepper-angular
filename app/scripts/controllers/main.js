@@ -8,11 +8,15 @@
  * Controller of the pepperAngularApp
  */
 angular.module('pepperAngularApp')
-  .controller('MainCtrl', function (qiSession) {
+  .controller('MainCtrl', function ($window, qiSession) {
     this.click = function () {
       qiSession.service("ALMemory").done(function (ALMemory) {
         console.log("ALMemory取得成功");
         ALMemory.raiseEvent("PepperQiMessaging/fromtablet", "押したね");
       });
+    };
+
+    this.reload = function () {
+      $window.location.reload();
     };
   });
