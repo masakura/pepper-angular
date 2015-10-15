@@ -12,7 +12,7 @@ angular.module('pepperAngularApp')
     this.click = function () {
       qiSession.service("ALMemory").done(function (ALMemory) {
         console.log("ALMemory取得成功");
-        ALMemory.raiseEvent("PepperQiMessaging/fromtablet", "押したね");
+        ALMemory.raiseEvent("PepperQiMessaging/fromtablet", "押すなっていったじゃん!");
       });
     };
 
