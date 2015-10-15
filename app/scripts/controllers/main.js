@@ -1,5 +1,7 @@
 'use strict';
 
+var session = new QiSession();
+
 /**
  * @ngdoc function
  * @name pepperAngularApp.controller:MainCtrl
@@ -11,6 +13,11 @@ angular.module('pepperAngularApp')
   .controller('MainCtrl', function () {
     this.click = function () {
       console.log(window.location);
-      console.log(QiSession);
+      console.log(session);
+
+      session.service("ALMemory").done(function (ALMemory) {
+        console.log("ALMemory取得成功");
+        ALMemory.raiseEvent("PepperQiMessaging/fromtablet", "押したね");
+      });
     };
   });
