@@ -8,18 +8,8 @@
  * Controller of the pepperAngularApp
  */
 angular.module('pepperAngularApp')
-  .controller('MainCtrl', function ($window, qiSession) {
-    this.cooks = [
-      {
-        id: 'cook0001',
-        name: 'だんぼ',
-        image: 'images/image-01.jpg'
-      }, {
-        id: 'cook0002',
-        name: '串揚げ',
-        image: 'images/image-02.jpg'
-      },
-    ];
+  .controller('MainCtrl', function ($window, qiSession, cookService) {
+    this.cooks = cookService.get();
 
     this.click = function () {
       qiSession.service("ALMemory").done(function (ALMemory) {
