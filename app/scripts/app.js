@@ -33,6 +33,6 @@ angular
         redirectTo: '/'
       });
   })
-  .run(function ($route) {
+  .run(function ($route) { // jshint ignore:line
     // これを書いておかないと ng-view inside ng-include が動かない
   });
