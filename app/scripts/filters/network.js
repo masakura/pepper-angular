@@ -11,9 +11,10 @@
 angular.module('pepperAngularApp')
   .filter('network', function ($window) {
     return function (input) {
-      if ($window.location.protocol === 'file:') {
-        return 'http://masakura.github.io/pepper-angular/' + input;
-      }
-      return input;
+      var image = $window.location.pathname.indexOf('lastUploadedChoregrapheBehavior') >= 0 ?
+            'http://masakura.github.io/pepper-angular/' + input :
+            input;
+
+      return image;
     };
   });
