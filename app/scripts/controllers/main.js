@@ -8,13 +8,6 @@
  * Controller of the pepperAngularApp
  */
 angular.module('pepperAngularApp')
-  .controller('MainCtrl', function (qiSession, cookService) {
+  .controller('MainCtrl', function (cookService, messageService) {
     this.cooks = cookService.get();
-
-    this.click = function () {
-      qiSession.service("ALMemory").done(function (ALMemory) {
-        console.log("ALMemory取得成功");
-        ALMemory.raiseEvent("PepperQiMessaging/fromtablet", "押すなっていったじゃん!");
-      });
-    };
   });
