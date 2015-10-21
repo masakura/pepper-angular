@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-xs-6 col-md-3" ng-repeat="cook in main.cooks">
       <a ng-href="#/cookbook/{{cook.id}}" class="thumbnail">
-        <img ng-src="{{cook.image}}" alt="{{cook.name}}">
+        <img ng-src="{{cook.image | network}}" alt="{{cook.name}}">
       </a>
     </div>
   </div>
