@@ -1,4 +1,4 @@
-<div class="header">
+<div class="header" ng-controller="PepperHeaderCtrl as header">
   <div class="navbar navbar-default" role="navigation">
     <div class="container">
       <div class="navbar-header">
@@ -27,6 +27,14 @@
             </span>
           </div>
         </form>
+
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <button type="button" class="btn btn-default" ng-click="header.reload()">
+              <span class="glyphicon glyphicon-refresh" aria-hidden="true"></span>
+            </button>
+          </li>
+        </ul>
       </div>
     </div>
   </div>
