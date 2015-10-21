@@ -9,5 +9,5 @@
  */
 angular.module('pepperAngularApp')
   .controller('MainCtrl', function (cookService, messageService) {
-    this.cooks = cookService.get();
+    this.cooks = cookService.all();
   });

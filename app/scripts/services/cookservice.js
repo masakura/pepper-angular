@@ -22,8 +22,14 @@ angular.module('pepperAngularApp')
     ];
 
     return {
-      get: function () {
+      all: function () {
         return cookbooks;
+      },
+      get: function (id) {
+        var filtered = cookbooks.filter(function (cookbook) {
+          return cookbook.id === id;
+        });
+        return filtered.length > 0 ? filtered[0] : undefined;
       }
     };
   });

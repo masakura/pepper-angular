@@ -8,10 +8,6 @@
  * Controller of the pepperAngularApp
  */
 angular.module('pepperAngularApp')
-  .controller('CookbookCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('CookbookCtrl', function ($routeParams, cookService) {
+    this.cook = cookService.get($routeParams.id);
   });
