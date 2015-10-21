@@ -34,5 +34,5 @@ angular
       });
   })
   .run(function ($route) {
-    $route.reload();
+    // これを書いておかないと ng-view inside ng-include が動かない
   });
