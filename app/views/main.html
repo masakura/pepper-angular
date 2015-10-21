@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-6 col-md-3" ng-repeat="cook in main.cooks">
-      <a href="#" class="thumbnail">
+      <a ng-href="#/cookbook/{{cook.id}}" class="thumbnail">
         <img ng-src="{{cook.image}}" alt="{{cook.name}}">
       </a>
     </div>
