@@ -9,12 +9,13 @@
  * Filter in the pepperAngularApp.
  */
 angular.module('pepperAngularApp')
-  .filter('network', function ($window) {
+  .filter('network', function (pepperService) {
+    if (pepperService.native) {
+      return function (input) {
+        return 'http://masakura.github.io/pepper-angular/' + input;
+      };
+    }
     return function (input) {
-      var image = $window.location.pathname.indexOf('lastUploadedChoregrapheBehavior') >= 0 ?
-            'http://masakura.github.io/pepper-angular/' + input :
-            input;
-
-      return image;
+      return input;
     };
   });
