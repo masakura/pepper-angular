@@ -28,14 +28,19 @@ angular.module('pepperAngularApp')
         ],
         directions: [
           {
+            message: 'cook0001',
             process: '鮭に塩コショウをし10分置く'
           }, {
+            message: 'cook0002',
             process: 'ペーパーで水気をふく'
           }, {
+            message: 'cook0003',
             process: 'フライパンに水を入れ、\nクッキングシートを敷く'
           }, {
+            message: 'cook0004',
             process: '水が湧いたら、鮭をいれて5分くらい焼く'
           }, {
+            message: 'cook0005',
             process: '裏返して3分焼く'
           }
         ]

@@ -7,7 +7,7 @@
 </ul>
 
 <ol class="list-group">
-  <li class="list-group-item" style="display: list-item" ng-repeat="direction in cookbook.cook.directions">
+  <li class="list-group-item" style="display: list-item" ng-repeat="direction in cookbook.cook.directions" ng-click="cookbook.start(direction)">
     {{direction.process}}
   </li>
 </ol>
