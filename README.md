@@ -1,12 +1,36 @@
-# pepper-angular
+# Pepper K部 料理系
 
-This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
-version 0.12.1.
 
-## Build & development
+## 使い方
+[GitHub Pages](http://masakura.github.io/pepper-angular/#/) で公開しています。一般のブラウザーで動作させた場合、Pepper に本来送るべきメッセージはブラウザーのコンソールに表示されます。
 
-Run `grunt` for building and `grunt serve` for preview.
 
-## Testing
+## 開発方法
+[Node.js](https://nodejs.org/)が必要です。また、`bower`及び`grunt`をインストールしてください。
 
-Running `grunt test` will run the unit tests with karma.
+
+### プロジェクトのセットアップ
+プロジェクトのセットアップは以下のようにしてください。
+
+```
+git clone git@github.com:masakura/pepper-angular.git
+cd pepper-angular
+npm install
+bower install
+```
+
+
+### プロジェクトの実行
+プロジェクトを実行する場合は以下のようにしてください。ブラウザーが自動で起動します。
+
+```
+grunt serve
+```
+
+
+### プロジェクトをデプロイする
+GitHub Pages にデプロイするには以下のようにしてください。
+
+```
+grunt deploy
+```
