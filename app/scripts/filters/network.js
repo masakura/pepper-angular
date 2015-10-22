@@ -12,6 +12,12 @@ angular.module('pepperAngularApp')
   .filter('network', function (pepperService) {
     if (pepperService.native) {
       return function (input) {
+        if (!input) {
+          return input;
+        } else if (input.indexOf('http') === 0) {
+          return input;
+        }
+
         return 'http://masakura.github.io/pepper-angular/' + input;
       };
     }
