@@ -8,6 +8,9 @@
 ## 開発方法
 [Node.js](https://nodejs.org/)が必要です。また、`bower`及び`grunt`をインストールしてください。
 
+```
+npm install -g bower grunt-cli
+```
 
 ### プロジェクトのセットアップ
 プロジェクトのセットアップは以下のようにしてください。
