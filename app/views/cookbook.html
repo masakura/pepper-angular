@@ -1,1 +1,13 @@
 <img ng-src="{{cookbook.cook.image | network}}" alt="{{cookbook.cook.name}}">
+
+<ul class="list-group">
+  <li class="list-group-item" ng-repeat="ingredient in  cookbook.cook.ingredients">
+    {{ingredient.name}}: {{ingredient.quantity}}
+  </li>
+</ul>
+
+<ol class="list-group">
+  <li class="list-group-item" style="display: list-item" ng-repeat="direction in cookbook.cook.directions">
+    {{direction.process}}
+  </li>
+</ol>
