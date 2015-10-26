@@ -8,6 +8,8 @@
  * Controller of the pepperAngularApp
  */
 angular.module('pepperAngularApp')
-  .controller('MainCtrl', function (cookService) {
+  .controller('MainCtrl', function (cookService, ALTextToSpeech) {
+    ALTextToSpeech.say('どの料理を作る?');
+
     this.cooks = cookService.all();
   });

@@ -28,11 +28,11 @@
             <li class="list-group-item list-group-heading">
               <h4 class="list-group-item-heading">作り方</h4>
             </li>
-            <li class="list-group-item" ng-repeat="direction in cookbook.cook.directions" ng-click="cookbook.start(direction)">
+            <li class="list-group-item" ng-repeat="direction in cookbook.cook.directions" ng-click="cookbook.start(direction, $event)">
               <span class="badge badge-left">{{$index + 1}}</span>
               <span class="cookbook-direction"">{{direction.process}}</span>
               <span>
-                <button type="button" class="cookbook-process-play btn btn-default btn-sm" ng-click="cookbook.start(direction)">
+                <button type="button" class="cookbook-process-play btn btn-default btn-sm" ng-click="cookbook.start(direction, $event)">
                   <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
                 </button>
               </span>
