@@ -8,6 +8,6 @@
  * Controller of the pepperAngularApp
  */
 angular.module('pepperAngularApp')
-  .controller('MainCtrl', function (cookService, messageService) {
+  .controller('MainCtrl', function (cookService) {
     this.cooks = cookService.all();
   });

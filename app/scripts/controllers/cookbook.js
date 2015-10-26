@@ -13,5 +13,5 @@ angular.module('pepperAngularApp')
 
     this.start = function (direction) {
       messageService.send(direction.message);
-    }
+    };
   });
