@@ -1,13 +1,35 @@
-<img ng-src="{{cookbook.cook.image | network}}" alt="{{cookbook.cook.name}}">
+<div class="panel panel-default cookbook cookbook-detail">
+  <div class="panel-heading">
+    <h3 class="panel-title">{{cookbook.cook.name}}</h3>
+  </div>
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-xs-6 col-md-3"">
+        <span class="thumbnail">
+          <img ng-src="{{cookbook.cook.image | network}}" alt="{{cookbook.cook.name}}">
+        </span>
+      </div>
+      <div class="col-xs-6 col-md-3">
+        <ul class="list-group">
+          <li class="list-group-item">
+            <h4 class="list-group-item-heading">材料</h4>
+          </li>
+          <li class="list-group-item" ng-repeat="ingredient in  cookbook.cook.ingredients">
+            {{ingredient.name}}: {{ingredient.quantity}}
+          </li>
+        </ul>
+      </div>
+    </div>
 
-<ul class="list-group">
-  <li class="list-group-item" ng-repeat="ingredient in  cookbook.cook.ingredients">
-    {{ingredient.name}}: {{ingredient.quantity}}
-  </li>
-</ul>
-
-<ol class="list-group">
-  <li class="list-group-item" style="display: list-item" ng-repeat="direction in cookbook.cook.directions" ng-click="cookbook.start(direction)">
-    {{direction.process}}
-  </li>
-</ol>
+    <div class="row">
+      <ol class="list-group">
+        <li class="list-group-item">
+          <h4 class="list-group-item-heading">作り方</h4>
+        </li>
+        <li class="list-group-item" style="display: list-item" ng-repeat="direction in cookbook.cook.directions" ng-click="cookbook.start(direction)">
+          {{direction.process}}
+        </li>
+      </ol>
+    </div>
+  </div>
+</div>
