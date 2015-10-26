@@ -1,0 +1,20 @@
+.cookbook .panel-default .panel-heading {
+  background-color: azure;
+}
+
+.cookbook .panel-default .panel-title {
+  color: darkchan;
+}
+
+.cookbook .list-group-heading {
+  padding: 5px;
+  background-color: snow;
+}
+
+.badge.badge-left {
+  float: left;
+}
+
+.cookbook-direction {
+  margin-left: 0.5em;
+}

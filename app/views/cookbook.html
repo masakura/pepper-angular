@@ -1,35 +1,40 @@
-<div class="panel panel-default cookbook cookbook-detail">
-  <div class="panel-heading">
-    <h3 class="panel-title">{{cookbook.cook.name}}</h3>
-  </div>
-  <div class="panel-body">
-    <div class="row">
-      <div class="col-xs-6 col-md-3"">
-        <span class="thumbnail">
-          <img ng-src="{{cookbook.cook.image | network}}" alt="{{cookbook.cook.name}}">
-        </span>
-      </div>
-      <div class="col-xs-6 col-md-3">
-        <ul class="list-group">
-          <li class="list-group-item">
-            <h4 class="list-group-item-heading">材料</h4>
-          </li>
-          <li class="list-group-item" ng-repeat="ingredient in  cookbook.cook.ingredients">
-            {{ingredient.name}}: {{ingredient.quantity}}
-          </li>
-        </ul>
-      </div>
+<div class="cookbook cookbook-detail">
+  <div class="panel panel-default cookbook cookbook-detail">
+    <div class="panel-heading">
+      <h3 class="panel-title">{{cookbook.cook.name}}</h3>
     </div>
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-xs-6 col-md-3">
+          <span class="thumbnail">
+            <img ng-src="{{cookbook.cook.image | network}}" alt="{{cookbook.cook.name}}">
+          </span>
+        </div>
+        <div class="col-xs-6 col-md-3">
+          <ul class="list-group">
+            <li class="list-group-item list-group-heading">
+              <h4 class="list-group-item-heading">材料</h4>
+            </li>
+            <li class="list-group-item" ng-repeat="ingredient in  cookbook.cook.ingredients">
+              {{ingredient.name}}: {{ingredient.quantity}}
+            </li>
+          </ul>
+        </div>
+      </div>
 
-    <div class="row">
-      <ol class="list-group">
-        <li class="list-group-item">
-          <h4 class="list-group-item-heading">作り方</h4>
-        </li>
-        <li class="list-group-item" style="display: list-item" ng-repeat="direction in cookbook.cook.directions" ng-click="cookbook.start(direction)">
-          {{direction.process}}
-        </li>
-      </ol>
+      <div class="row">
+        <div class="col-xs-12 col-md-6">
+          <ol class="list-group">
+            <li class="list-group-item list-group-heading">
+              <h4 class="list-group-item-heading">作り方</h4>
+            </li>
+            <li class="list-group-item" ng-repeat="direction in cookbook.cook.directions" ng-click="cookbook.start(direction)">
+              <span class="badge badge-left">{{$index + 1}}</span>
+              <span class="cookbook-direction"">{{direction.process}}</span>
+            </li>
+          </ol>
+        </div>
+      </div>
     </div>
   </div>
 </div>
