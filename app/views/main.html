@@ -1,9 +1,16 @@
 <div class="container">
   <div class="row">
-    <div class="col-xs-6 col-md-3" ng-repeat="cook in main.cooks">
-      <a ng-href="#/cookbook/{{cook.id}}" class="thumbnail">
-        <img ng-src="{{cook.image | network}}" alt="{{cook.name}}">
-      </a>
+    <div class="col-xs-6 col-md-3 cookbook cookbook-thumbnail" ng-repeat="cook in main.cooks">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3><a ng-href="#/cookbook/{{cook.id}}">{{cook.name}}</a></h3>
+        </div>
+        <div class="panel-body">
+          <a ng-href="#/cookbook/{{cook.id}}" class="thumbnail">
+            <img ng-src="{{cook.image | network}}" alt="{{cook.name}}">
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 </div>
