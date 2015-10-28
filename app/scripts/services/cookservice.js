@@ -12,7 +12,7 @@ angular.module('pepperAngularApp')
     var cookbooks = [
       {
         id: 'cook0001',
-        name: 'だんぼ',
+        name: '焼き魚',
         image: 'images/image-01.jpg',
         ingredients: [
           {
