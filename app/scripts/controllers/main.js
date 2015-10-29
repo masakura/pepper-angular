@@ -9,7 +9,7 @@
  */
 angular.module('pepperAngularApp')
   .controller('MainCtrl', function (cookService, ALTextToSpeech) {
-    ALTextToSpeech.say('どの料理を作る?');
+    ALTextToSpeech.say( '今日のお勧めはこのメニューはこれです！');
 
     this.cooks = cookService.all();
   });
